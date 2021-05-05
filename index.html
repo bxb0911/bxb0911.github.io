@@ -1,1 +1,226 @@
-Nothing...
+<html>
+  <head>
+    <title>精通flex</title>
+    <style>
+      .container > section {
+        display: flex;
+        margin-bottom: 10px;
+        border: 1px solid #210505;
+      }
+      .container > section > p {
+        border: 1px solid red;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>盒子:</h1>
+      <h2>主轴方向</h2>
+      <h3>flex-direction属性</h3>
+      <header>flex-direction: row <strong>默认值</strong></header>
+      <section style="flex-direction: row;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+      <header>flex-direction: row-reverse</header>
+      <section style="flex-direction: row-reverse;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+      <header>flex-direction: column</header>
+      <section style="flex-direction: column;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+      <header>flex-direction: column-reverse</header>
+      <section style="flex-direction: column-reverse;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+
+      <h2>换行</h2>
+      <h3>flex-wrap属性</h3>
+      <header>flex-direction: nowrap <strong>默认值</strong></header>
+      <section style="width: 600px;flex-wrap: nowrap">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+      <header>flex-direction: wrap</header>
+      <section style="width: 600px;flex-wrap: wrap">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+      <header>flex-direction: wrap-reverse</header>
+      <section style="width: 600px;flex-wrap:wrap-reverse">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+
+      <h2>direction+wrap缩写</h2>
+      <h3>flex-flow属性</h3>
+      <header>flex-flow: row wrap</header>
+      <section style="width: 600px;flex-flow: row wrap">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+      <strong><i>亲测flex-direction:column|column-reverse，后面的flex-wrap值均失效</i></strong>
+
+      <h2>主轴上的位置</h2>
+      <h3>justify-content属性</h3>
+      <header>justify-content: flex-start <strong>默认值</strong></header>
+      <section style="justify-content: flex-start;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+      <header>justify-content: flex-end</header>
+      <section style="justify-content: flex-end;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+      <header>justify-content: center</header>
+      <section style="justify-content: center;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+      <header>justify-content: space-around</header>
+      <section style="justify-content: space-around;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+      <header>justify-content: space-between</header>
+      <section style="justify-content: space-between;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+      <header>justify-content: space-evenly</header>
+      <section style="justify-content: space-evenly;">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+
+      <h2>交叉轴上的位置</h2>
+      <h3>align-items属性</h3>
+      <header>align-items: stretch <strong>默认值</strong></header>
+      <section style="align-items: stretch;">
+        <p style="height: 100px;">First</p>
+        <p style="height: 50px;">Second</p>
+        <p style="height: 150px;">Third</p>
+      </section>
+      <header>align-items: center</header>
+      <section style="align-items: center;">
+        <p style="height: 100px;">First</p>
+        <p style="height: 50px;">Second</p>
+        <p style="height: 150px;">Third</p>
+      </section>
+      <header>align-items: flex-start</header>
+      <section style="align-items: flex-start;">
+        <p style="height: 100px;">First</p>
+        <p style="height: 50px;">Second</p>
+        <p style="height: 150px;">Third</p>
+      </section>
+      <header>align-items: flex-end</header>
+      <section style="align-items: flex-end;">
+        <p style="height: 100px;">First</p>
+        <p style="height: 50px;">Second</p>
+        <p style="height: 150px;">Third</p>
+      </section>
+
+      <h1>内部元素</h1>
+      <h2>主轴方向的初始大小（不使用box-sizing改变盒模型的话，这个属性就决定了flex元素的content-box的尺寸）</h2>
+      <h3>flex-basis属性</h3>
+      <header>flex-basis: auto <strong>默认值</strong></header>
+      <section>
+        <p style="width: 200px; flex-basis: auto;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p style="width: 500px;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+      <header>flex-basis: &lt;'width'&gt;</header>
+      <section>
+        <p style="width: 200px; flex-basis: 400px;;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p style="width: 500px;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+
+      <h2>flex增长系数（剩余空间多少分配给项目）</h2>
+      <h3>flex-grow属性</h3>
+      <header>flex-grow: 1|2</header>
+      <section>
+        <p style="flex-basis: 200px;flex-grow: 1;">First</p>
+        <p style="flex-basis: 200px;flex-grow: 2;">Second</p>
+      </section>
+
+      <h2>flex收缩规则</h2>
+      <h3>flex-shrink属性</h3>
+      <header>flex-shrink: 1|2</header>
+      <section style="width: 300px;">
+        <p style="flex-basis: 200px;flex-shrink: 1;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p style="flex-basis: 200px;flex-shrink: 2;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+
+      <h2>grow+shrink+basis缩写</h2>
+      <h3>flex属性</h3>
+      <header>flex: 1|auto</header>
+      <section>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+
+      <h2>设置每个元素的交叉轴位置，覆盖align-items属性</h2>
+      <h3>align-self属性（以中间的格子为例）</h3>
+      <header>align-self: stretch <strong>默认值</strong></header>
+      <section style="align-items: center;">
+        <p style="height: 100px;">First</p>
+        <p style="height: 50px; align-self: stretch;">Second</p>
+        <p style="height: 150px;">Third</p>
+      </section>
+      <header>align-self: center</header>
+      <section style="align-items: stretch;">
+        <p style="height: 100px;">First</p>
+        <p style="height: 50px; align-self: center;">Second</p>
+        <p style="height: 150px; align-self: stretch;">Third</p>
+      </section>
+      <header>align-self: flex-start</header>
+      <section style="align-items: flex-end;">
+        <p style="height: 100px;">First</p>
+        <p style="height: 50px; align-self: flex-start;">Second</p>
+        <p style="height: 150px;">Third</p>
+      </section>
+      <header>align-self: flex-end</header>
+      <section style="align-items: flex-start;">
+        <p style="height: 100px;">First</p>
+        <p style="height: 50px; align-self: flex-end;">Second</p>
+        <p style="height: 150px;">Third</p>
+      </section>
+
+      <h2>排列顺序</h2>
+      <h3>order属性</h3>
+      <header>order: 0 <strong>默认值</strong></header>
+      <section>
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+      </section>
+      <header>order &gt; 0（1 1 0）</header>
+      <section>
+        <p style="order: 1">First</p>
+        <p style="order: 1">Second</p>
+        <p style="order: 0">Third</p>
+      </section>
+      <header>order &lt; 0（1 -1 0）</header>
+      <section>
+        <p style="order: 1">First</p>
+        <p style="order: -1">Second</p>
+        <p style="order: 0">Third</p>
+      </section>
+    </div>
+  </body>
+</html>
