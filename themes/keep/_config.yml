@@ -40,7 +40,7 @@ style:
   first_screen:
     enable: true
     background_img: /images/bg.svg   # You can use local image or image external link
-    description: Fifty thousand is waiting for you.
+    description: Fifty thousand is waiting for 
 
   # Scroll style settings
   scroll:
