@@ -21,7 +21,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"bxb0911.github.io","root":"/","language":"zh-CN"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Fifty thousand is waiting for"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Fifty thousand is waiting for"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.3"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
   </script>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -287,27 +287,43 @@
 
       <h2>flex增长系数（剩余空间多少分配给项目）</h2>
       <h3>flex-grow属性</h3>
-      <header>flex-grow: 1|2</header>
+      <header>flex-grow: 0<strong>默认值</strong></header>
       <section>
-        <p style="flex-basis: 200px;flex-grow: 1;">First</p>
-        <p style="flex-basis: 200px;flex-grow: 2;">Second</p>
+        <p style="flex-basis: 200px;flex-grow: 1;">flex-grow: 1</p>
+        <p style="flex-basis: 200px;flex-grow: 2;">flex-grow: 2</p>
       </section>
 
       <h2>flex收缩规则</h2>
       <h3>flex-shrink属性</h3>
-      <header>flex-shrink: 1|2</header>
+      <header>flex-shrink: 1<strong>默认值</strong></header>
       <section style="width: 300px;">
-        <p style="flex-basis: 200px;flex-shrink: 1;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <p style="flex-basis: 200px;flex-shrink: 2;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p style="flex-basis: 200px;flex-shrink: 1;">flex-shrink: 1 => Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p style="flex-basis: 200px;flex-shrink: 2;">flex-shrink: 2 => It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
       </section>
 
       <h2>grow+shrink+basis缩写</h2>
       <h3>flex属性</h3>
-      <header>flex: 1|auto</header>
-      <section>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-      </section>
+      <header>flex: 0 1 auto<strong>默认值</strong></header>
+      <h4>单值语法</h4>
+      <p>值必须为以下其中之一:</p>
+      <ul>
+        <li>一个无单位数(&lt;number&gt;): 它会被当作flex:&lt;number&gt; 1 0; &lt;flex-shrink>的值被假定为1，然后&lt;flex-basis&gt; 的值被假定为0</li>
+        <li>一个有效的宽度(width)值: 它会被当作 &lt;flex-basis&gt;的值</li>
+        <li>关键字none，auto或initial</li>
+      </ul>
+      <h4>双值语法</h4>
+      <p>第一个值必须为一个无单位数，并且它会被当作 &lt;flex-grow&gt; 的值。第二个值必须为以下之一：</p>
+      <ul>
+        <li>一个无单位数：它会被当作 &lt;flex-shrink&gt; 的值</li>
+        <li>一个有效的宽度(width)值: 它会被当作 &lt;flex-basis&gt;的值</li>
+      </ul>
+      <h4>三值语法</h4>
+      <ul>
+        <li>第一个值必须为一个无单位数，并且它会被当作 &lt;flex-grow&gt; 的值</li>
+        <li>第二个值必须为一个无单位数，并且它会被当作  &lt;flex-shrink&gt; 的值</li>
+        <li>第三个值必须为一个有效的宽度值， 并且它会被当作 &lt;flex-basis&gt; 的值</li>
+      </ul>
+      <img width="100%" src="./resource/flex.png">
 
       <h2>设置每个元素的交叉轴位置，覆盖align-items属性</h2>
       <h3>align-self属性（以中间的格子为例）</h3>
@@ -501,10 +517,6 @@
 <script src="/js/code-copy.js"></script>
 
 
-
-
-    
-<script src="/js/lazyload.js"></script>
 
 
 
